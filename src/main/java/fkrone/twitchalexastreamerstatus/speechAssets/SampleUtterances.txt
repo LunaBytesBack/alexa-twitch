@@ -1,0 +1,40 @@
+StreamStatusIntent whether he streams
+StreamStatusIntent whether she streams
+StreamStatusIntent whether they stream
+StreamStatusIntent whether he is currently streaming
+StreamStatusIntent whether she is currently streaming
+StreamStatusIntent whether they are currently streaming
+StreamStatusIntent whether he is streaming at the moment
+StreamStatusIntent whether she is streaming at the moment
+StreamStatusIntent whether they are streaming at the moment
+StreamStatusIntent whether he is streaming right now
+StreamStatusIntent whether she is streaming right now
+StreamStatusIntent whether they are streaming right now
+StreamStatusIntent if he streams
+StreamStatusIntent if she streams
+StreamStatusIntent if they stream
+StreamStatusIntent if he is currently streaming
+StreamStatusIntent if she is currently streaming
+StreamStatusIntent if they are currently streaming
+StreamStatusIntent if he is streaming at the moment
+StreamStatusIntent if she is streaming at the moment
+StreamStatusIntent if they are streaming at the moment
+StreamStatusIntent if he is streaming right now
+StreamStatusIntent if she is streaming right now
+StreamStatusIntent if they are streaming right now
+StreamStatusIntent does he stream
+StreamStatusIntent does she stream
+StreamStatusIntent do they stream
+StreamStatusIntent does he currently stream
+StreamStatusIntent does she currently stream
+StreamStatusIntent do they currently stream
+StreamStatusIntent does he stream right now
+StreamStatusIntent does she stream right now
+StreamStatusIntent do they stream right now
+StreamStatusIntent is he live
+StreamStatusIntent is she live
+StreamStatusIntent are they live
+StreamStatusIntent streaming right now
+StreamStatusIntent is he streaming right now
+StreamStatusIntent is she streaming right now
+StreamStatusIntent are they streaming right now
