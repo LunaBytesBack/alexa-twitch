@@ -11,7 +11,7 @@ You need to provide three piece of information in order to run this skill:
 
 You can obtain the channel id by the following command:
 ```
-curl -H 'Accept: application/vnd.twitchtv.v5+json' -H 'Client-ID: _your_client_id_' -X GET https://api.twitch.tv/kraken/users?login=_streamer_name
+curl -H 'Accept: application/vnd.twitchtv.v5+json' -H 'Client-ID: _your_client_id_' -X GET https://api.twitch.tv/kraken/users?login=_streamer_name_
 ```
 
 ## License
