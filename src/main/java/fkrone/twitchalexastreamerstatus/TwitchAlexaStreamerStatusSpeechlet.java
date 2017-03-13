@@ -37,14 +37,19 @@ public class TwitchAlexaStreamerStatusSpeechlet implements Speechlet {
 
     @Override
     public void onSessionStarted(SessionStartedRequest request, Session session) throws SpeechletException {
-        LOGGER.info("onSessionStarted requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+        if (LOGGER.isInfoEnabled()) {
+            LOGGER.info("onSessionStarted requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+        }
 
         // nothing to do here
     }
 
     @Override
     public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
-        LOGGER.info("onLaunch requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+        if (LOGGER.isInfoEnabled()) {
+            LOGGER.info("onLaunch requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+        }
+
         PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
         speech.setText(
                 "If you want to know if your favourite streamer is currently live just ask me whether he or she is currently streaming or not.");
@@ -55,7 +60,9 @@ public class TwitchAlexaStreamerStatusSpeechlet implements Speechlet {
 
     @Override
     public SpeechletResponse onIntent(IntentRequest request, Session session) throws SpeechletException {
-        LOGGER.info("onIntent requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+        if (LOGGER.isInfoEnabled()) {
+            LOGGER.info("onIntent requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+        }
 
         Intent intent = request.getIntent();
         if (intent == null) {
@@ -84,10 +91,11 @@ public class TwitchAlexaStreamerStatusSpeechlet implements Speechlet {
 
     @Override
     public void onSessionEnded(SessionEndedRequest request, Session session) throws SpeechletException {
-        LOGGER.info("onSessionEnded requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+        if (LOGGER.isInfoEnabled()) {
+            LOGGER.info("onSessionEnded requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+        }
 
         // nothing to do here
-
     }
 
     private SpeechletResponse getHelpResponse() {
@@ -113,7 +121,9 @@ public class TwitchAlexaStreamerStatusSpeechlet implements Speechlet {
             PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
 
             if (con.getResponseCode() != 200) {
-                LOGGER.error("Got response code " + con.getResponseCode() + " from api.");
+                if (LOGGER.isErrorEnabled()) {
+                    LOGGER.error("Got response code " + con.getResponseCode() + " from api.");
+                }
                 speech.setText("I'm sorry but it seems like I could not retrieve the stream status.");
                 return SpeechletResponse.newTellResponse(speech);
             }
@@ -139,9 +149,7 @@ public class TwitchAlexaStreamerStatusSpeechlet implements Speechlet {
                 return SpeechletResponse.newTellResponse(speech);
             }
 
-            if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug("Streamer is currently live.");
-            }
+            LOGGER.debug("Streamer is currently live.");
 
             if (!streamNode.isObject()) {
                 LOGGER.error("Blame Twitch, something went horribly wrong. The stream object is not an object.");
